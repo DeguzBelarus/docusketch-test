@@ -6,10 +6,15 @@
   position: relative;
   padding: 5px;
   border: 1px solid #bbb;
-  background-color: #ddd;
+  background-color: #ccc;
   color: #000;
   font-weight: bold;
   border-radius: 4px;
   transform: translateX(-1px) translateY(3px);
   cursor: pointer;
+  transition: background-color 0.4s linear;
+
+  @include hover {
+    background-color: #ddd;
+  }
 }
