@@ -4,7 +4,6 @@
   "description": "A test task for DocuSketch",
   "main": "index.tsx",
   "scripts": {
-    "start": "webpack --env mode=production",
     "development": "webpack serve --env mode=development PORT=3000",
     "build": "webpack --env mode=production",
     "build:dev": "webpack --env mode=development"
