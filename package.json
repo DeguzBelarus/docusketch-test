@@ -6,8 +6,8 @@
   "scripts": {
     "start": "webpack --env mode=production",
     "development": "webpack serve --env mode=development PORT=3000",
-    "build:webpack:prod": "webpack --env mode=production",
-    "build:webpack:dev": "webpack --env mode=development"
+    "build": "webpack --env mode=production",
+    "build:dev": "webpack --env mode=development"
   },
   "repository": {
     "type": "git",
