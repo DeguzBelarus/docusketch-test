@@ -1,0 +1,8 @@
+@import '../../styles/variables/main-variables';
+
+.MainPage {
+  width: 100%;
+  height: 100dvh;
+  @include flex-all-center;
+  @include user-select-none;
+}

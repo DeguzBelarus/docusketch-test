@@ -1,32 +1,43 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { WritableDraft } from 'immer/dist/internal';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 import { RootState } from '../store';
-import { MainState } from '../types';
+import { IIConData, MainState } from '../types';
 import { Nullable } from 'types/types';
 
 const initialState: MainState = {
-  currentDisplayedIcon: null,
+  currentlyDisplayedIcon: null,
+  iconsQueue: [],
+  isIconChanging: false,
 };
 
 export const mainSlice = createSlice({
   name: 'main',
   initialState,
   reducers: {
-    setCurrentDisplayedIcon(
+    setCurrentlyDisplayedIcon(
       state: WritableDraft<MainState>,
-      { payload }: PayloadAction<Nullable<string>>,
+      { payload }: PayloadAction<Nullable<IconProp>>,
     ) {
-      state.currentDisplayedIcon = payload;
+      state.currentlyDisplayedIcon = payload;
+    },
+    setIconsQueue(state: WritableDraft<MainState>, { payload }: PayloadAction<Array<IIConData>>) {
+      state.iconsQueue = payload;
+    },
+    setIsIconChanging(state: WritableDraft<MainState>, { payload }: PayloadAction<boolean>) {
+      state.isIconChanging = payload;
     },
   },
 });
 
 export const {
-  actions: { setCurrentDisplayedIcon },
+  actions: { setCurrentlyDisplayedIcon, setIsIconChanging, setIconsQueue },
 } = mainSlice;
 
-export const getCurrentDisplayedIcon = ({ main: { currentDisplayedIcon } }: RootState) =>
-  currentDisplayedIcon;
+export const getCurrentDisplayedIcon = ({ main: { currentlyDisplayedIcon } }: RootState) =>
+  currentlyDisplayedIcon;
+export const getIsIconChanging = ({ main: { isIconChanging } }: RootState) => isIconChanging;
+export const getIconsQueue = ({ main: { iconsQueue } }: RootState) => iconsQueue;
 
 export const { reducer } = mainSlice;

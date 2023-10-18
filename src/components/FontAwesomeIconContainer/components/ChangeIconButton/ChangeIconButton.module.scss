@@ -1,0 +1,19 @@
+@import '../../../../styles/variables/main-variables';
+
+.ChangeIconButton {
+  width: calc(100% + 2px);
+  @include flex-all-center;
+  position: relative;
+  padding: 5px;
+  border: 1px solid #bbb;
+  background-color: #ddd;
+  color: #000;
+  font-weight: bold;
+  border-radius: 4px;
+  transform: translateX(-1px) translateY(3px);
+  cursor: pointer;
+
+  &.disabled {
+    cursor: default;
+  }
+}

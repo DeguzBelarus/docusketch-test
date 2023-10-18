@@ -1,0 +1,32 @@
+@import '../../../../styles/variables/main-variables';
+
+.IconQueueItem {
+  width: 100%;
+  height: $icon-queue-item-height + px;
+  @include flex-line-spacebetween-vertical-center;
+  position: relative;
+  border-top: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+  padding: 3px 4px;
+
+  .id-span {
+    font-weight: bold;
+    font-size: 12px;
+  }
+
+  .progress-bar {
+    width: 0;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #bbb;
+    animation: progress-activated 3s linear forwards;
+  }
+}
+
+@keyframes progress-activated {
+  to {
+    width: 100%;
+  }
+}
