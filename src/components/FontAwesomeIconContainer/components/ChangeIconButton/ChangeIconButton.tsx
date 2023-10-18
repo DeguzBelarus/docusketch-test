@@ -6,13 +6,12 @@ import * as freeRegularSvgIcons from '@fortawesome/free-regular-svg-icons';
 import * as freeSolidSvgIcons from '@fortawesome/free-solid-svg-icons';
 import { v4 as uuidV4 } from 'uuid';
 
-import { getIsIconChanging, setIconsQueue, getIconsQueue } from 'redux/slices/mainSlice';
-import styles from './ChangeIconButton.module.scss';
+import { setIconsQueue, getIconsQueue } from 'redux/slices/mainSlice';
 import { classNames } from 'helpers/classNames';
+import styles from './ChangeIconButton.module.scss';
 
 export const ChangeIconButton: FC = () => {
   const dispatch = useAppDispatch();
-  const isIconChanging = useAppSelector(getIsIconChanging);
   const iconsQueue = useAppSelector(getIconsQueue);
   const iconsSets = [freeBrandsSvgIcons, freeRegularSvgIcons, freeSolidSvgIcons];
   const maxIconsSetIndex = iconsSets?.length - 1;
@@ -30,11 +29,7 @@ export const ChangeIconButton: FC = () => {
     dispatch(setIconsQueue([...iconsQueue, { data: randomChosenIconFromSet, id }]));
   };
   return (
-    <div
-      className={classNames(styles.ChangeIconButton, [], { [styles.disabled]: isIconChanging })}
-      role="button"
-      onClick={getRandomIcon}
-    >
+    <div className={classNames(styles.ChangeIconButton)} role="button" onClick={getRandomIcon}>
       generate an icon
     </div>
   );

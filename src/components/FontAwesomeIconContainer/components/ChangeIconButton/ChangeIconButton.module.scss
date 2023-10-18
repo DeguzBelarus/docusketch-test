@@ -12,8 +12,4 @@
   border-radius: 4px;
   transform: translateX(-1px) translateY(3px);
   cursor: pointer;
-
-  &.disabled {
-    cursor: default;
-  }
 }
