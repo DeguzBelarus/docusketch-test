@@ -26,7 +26,7 @@ run npm install
 run npm run development
 ```
 
-## 10. Check the app according to the task
+## 5. Check the app according to the task
 
 ### Notes
 
