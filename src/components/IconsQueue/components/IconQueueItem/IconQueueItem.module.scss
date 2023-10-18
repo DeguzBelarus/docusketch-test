@@ -5,8 +5,7 @@
   height: $icon-queue-item-height + px;
   @include flex-line-spacebetween-vertical-center;
   position: relative;
-  border-top: 1px solid #bbb;
-  border-bottom: 1px solid #bbb;
+  border-block: 1px solid #bbb;
   padding: 3px 4px;
 
   .id-span {
