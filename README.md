@@ -30,6 +30,10 @@ run npm run development
 
 ### Notes
 
-- this project created with React and Redux toolkit libraries;
+- this project is created with React and Redux toolkit libraries;
 
-- this project configured with webpack
+- TypeScript is chosen as the main language;
+
+- the styles for this project are written using SCSS preprocessor;
+
+- this project configured with webpack.
