@@ -14,8 +14,5 @@ export const webpackDevServer = (options: IWebpackConfigOptions): WebpackDevServ
       progress: true,
       reconnect: true,
     },
-    proxy: {
-      '/api': 'http://localhost:5000',
-    },
   };
 };
