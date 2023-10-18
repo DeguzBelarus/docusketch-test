@@ -21,7 +21,7 @@
     left: 0;
     bottom: 0;
     background-color: #bbb;
-    animation: progress-activated 3s linear forwards;
+    animation: progress-activated $icon-displaying-delay linear forwards;
   }
 }
 
