@@ -3,8 +3,8 @@ import { useAppSelector } from 'redux/hooks';
 
 import { getIconsQueue } from 'redux/slices/mainSlice';
 import { classNames } from 'helpers/classNames';
-import styles from './IconsQueue.module.scss';
 import { IconQueueItem } from './components/IconQueueItem/IconQueueItem';
+import styles from './IconsQueue.module.scss';
 
 export const IconsQueue: FC = () => {
   const iconsQueue = useAppSelector(getIconsQueue);
