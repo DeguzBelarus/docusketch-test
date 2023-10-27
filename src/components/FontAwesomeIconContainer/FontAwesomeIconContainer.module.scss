@@ -1,0 +1,26 @@
+@import '../../styles/variables/main-variables';
+
+.FontAwesomeIconContainer {
+  @include flex-column-line-start-vertical-top;
+  gap: 4px;
+  position: relative;
+  border: 1px solid $main-theme-color;
+  background-color: #fff;
+
+  .icon-wrapper {
+    width: $font-awesome-button-width + px;
+    height: $font-awesome-button-height + px;
+    min-width: $font-awesome-button-width + px;
+    min-height: $font-awesome-button-height + px;
+    @include flex-all-center;
+
+    .default-icon-image {
+      width: 95%;
+      min-width: 95%;
+      height: 95%;
+      min-height: 95%;
+      opacity: 0;
+      @include animation-appearing;
+    }
+  }
+}

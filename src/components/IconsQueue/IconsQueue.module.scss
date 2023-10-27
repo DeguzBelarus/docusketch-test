@@ -1,0 +1,23 @@
+@import '../../styles/variables/main-variables';
+
+.IconsQueue {
+  width: $icons-queue-width + px;
+  height: 100%;
+  @include flex-column-line-center-vertical-top;
+  gap: 2px;
+  position: absolute;
+  left: 0;
+  border: 1px solid $main-theme-color;
+  overflow-y: scroll;
+  overflow-x: visible !important;
+  @include scroll;
+
+  &.empty {
+    @include flex-all-center;
+  }
+
+  .empty-notification-span {
+    font-weight: bold;
+    color: $main-theme-color;
+  }
+}

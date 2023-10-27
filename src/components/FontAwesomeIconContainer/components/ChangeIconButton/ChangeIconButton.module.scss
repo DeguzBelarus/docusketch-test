@@ -1,0 +1,22 @@
+@import '../../../../styles/variables/main-variables';
+
+.ChangeIconButton {
+  width: 100%;
+  @include flex-all-center;
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  padding: 5px;
+  border: 1px solid #bbb;
+  background-color: #ccc;
+  color: #000;
+  font-weight: bold;
+  border-radius: 4px;
+  transform: translateY(calc(100% - 1px));
+  cursor: pointer;
+  transition: background-color 0.4s linear;
+
+  @include hover {
+    background-color: #ddd;
+  }
+}

@@ -1,0 +1,41 @@
+@import '../../../../styles/variables/main-variables';
+
+.QueueModeSwitcher {
+  width: 100%;
+  height: $queue-mode-switcher-height + px;
+  @include flex-line-spacebetween-vertical-center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  border: 1px solid #bbb;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom: none;
+  background-color: #fff;
+
+  .queue-mode-toggle-button {
+    width: 100%;
+    height: calc(100% - 1px);
+    @include flex-all-center;
+    border: none;
+    transition-property: background-color, opacity, border, color;
+    transition-duration: 0.4s;
+    transition-timing-function: linear;
+    color: #000;
+    font-weight: bold;
+    outline: none;
+
+    &:disabled {
+      opacity: 0.6;
+    }
+
+    &.active {
+      color: $main-theme-color;
+    }
+
+    &:not(.active) {
+      background-color: #ccc;
+    }
+  }
+}
