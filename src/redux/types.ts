@@ -12,4 +12,5 @@ export interface MainState {
   currentlyDisplayedIcon: Nullable<IconProp>;
   iconsQueue: Array<IIConData>;
   isIconChanging: boolean;
+  isQueueMode: boolean;
 }

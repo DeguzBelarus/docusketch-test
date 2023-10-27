@@ -3,6 +3,7 @@ $font-awesome-button-width: 200;
 $font-awesome-button-height: 200;
 $icons-queue-width: 230;
 $icon-queue-item-height: 40;
+$queue-mode-switcher-height: 25;
 
 // timers
 $icon-displaying-delay: 3s;
@@ -202,5 +203,18 @@ $mobile-small-width: 319px;
     height: 5px;
     background-color: #bbb;
     border-radius: 5px;
+  }
+}
+
+// animations
+@mixin animation-appearing {
+  & {
+    animation: appearing 1.5s linear 0s 1 forwards;
+  }
+
+  @keyframes appearing {
+    to {
+      opacity: 1;
+    }
   }
 }
