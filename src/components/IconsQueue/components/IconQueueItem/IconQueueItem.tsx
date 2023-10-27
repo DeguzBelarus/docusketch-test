@@ -31,7 +31,7 @@ export const IconQueueItem: FC<Props> = ({ position, data, id }) => {
   return (
     <div className={classNames(styles.IconQueueItem)}>
       <span className={classNames(styles['id-span'])}>{position}</span>
-      <FontAwesomeIcon icon={data} style={{ width: 'auto', height: '85%' }} />
+      <FontAwesomeIcon icon={data} style={{ width: 'auto', height: '85%', color: '#007DB6' }} />
       {isFirst || !isQueueMode ? (
         <div
           className={classNames(styles['progress-bar'])}

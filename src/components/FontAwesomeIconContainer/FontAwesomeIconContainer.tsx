@@ -16,7 +16,10 @@ export const FontAwesomeIconContainer: FC = () => {
       <QueueModeSwitcher />
       <div className={classNames(styles['icon-wrapper'])}>
         {currentlyDisplayedIcon ? (
-          <FontAwesomeIcon icon={currentlyDisplayedIcon} style={{ width: '95%', height: '95%' }} />
+          <FontAwesomeIcon
+            icon={currentlyDisplayedIcon}
+            style={{ width: '95%', height: '95%', color: '#007DB6' }}
+          />
         ) : (
           <img
             src={defaultIcon}

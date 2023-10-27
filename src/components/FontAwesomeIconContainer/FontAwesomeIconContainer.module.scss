@@ -4,7 +4,8 @@
   @include flex-column-line-start-vertical-top;
   gap: 4px;
   position: relative;
-  border: 1px solid #bbb;
+  border: 1px solid $main-theme-color;
+  background-color: #fff;
 
   .icon-wrapper {
     width: $font-awesome-button-width + px;

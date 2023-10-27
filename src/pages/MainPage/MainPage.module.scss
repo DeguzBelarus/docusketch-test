@@ -5,4 +5,5 @@
   height: 100dvh;
   @include flex-all-center;
   @include user-select-none;
+  background-color: $background-color;
 }

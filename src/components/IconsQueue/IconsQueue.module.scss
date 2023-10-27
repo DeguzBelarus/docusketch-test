@@ -7,7 +7,7 @@
   gap: 2px;
   position: absolute;
   left: 0;
-  border: 1px solid #bbb;
+  border: 1px solid $main-theme-color;
   overflow-y: scroll;
   overflow-x: visible !important;
   @include scroll;
@@ -18,5 +18,6 @@
 
   .empty-notification-span {
     font-weight: bold;
+    color: $main-theme-color;
   }
 }

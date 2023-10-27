@@ -10,9 +10,10 @@ export const QueueModeSwitcher: FC = () => {
   const isQueueMode = useAppSelector(getIsQueueMode);
   const iconsQueue = useAppSelector(getIconsQueue);
   const queueModeEnableTextIndicator = isQueueMode ? 'enabled' : 'disabled';
+  const isQueueProcessing = Boolean(iconsQueue?.length);
 
   const queueModeToggler = () => {
-    dispatch(setIsQueueMode(!isQueueMode));
+    !isQueueProcessing && dispatch(setIsQueueMode(!isQueueMode));
   };
   return (
     <div className={classNames(styles.QueueModeSwitcher)}>
@@ -21,7 +22,7 @@ export const QueueModeSwitcher: FC = () => {
           [styles.active]: isQueueMode,
         })}
         type="button"
-        disabled={Boolean(iconsQueue?.length)}
+        disabled={isQueueProcessing}
         onClick={queueModeToggler}
       >
         <span>{`queue mode: ${queueModeEnableTextIndicator}`}</span>
